@@ -3,15 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
-import galleryHero from "@/assets/gallery-hero.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import aboutImage from "@/assets/about-beauty.jpg";
-import heroImage from "@/assets/hero-beauty.jpg";
 
 import { fadeUp } from "@/lib/animations";
+import { mockImages } from "@/lib/mockImages";
+
+const galleryHero = mockImages.galleryHero;
+const gallery1 = mockImages.gallery1;
+const gallery2 = mockImages.gallery2;
+const gallery3 = mockImages.gallery3;
+const gallery4 = mockImages.gallery4;
+const aboutImage = mockImages.aboutBeauty;
+const heroImage = mockImages.heroBeauty;
 
 const images = [
   { src: gallery1, alt: "Luxury skincare products", category: "Products" },
@@ -30,9 +32,9 @@ const Gallery = () => {
       <Navbar />
       <PageHero image={galleryHero} title="Gallery" subtitle="A Glimpse Into Our World" />
 
-      <section className="py-24 px-8 md:px-16">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 sm:gap-4 space-y-3 sm:space-y-4">
             {images.map((img, i) => (
               <motion.div
                 key={i}
@@ -51,8 +53,8 @@ const Gallery = () => {
                     className="w-full object-cover group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/30 transition-colors duration-500 flex items-end p-6">
-                    <span className="font-body text-xs tracking-[0.2em] uppercase text-secondary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute inset-0 bg-secondary/20 sm:bg-secondary/0 group-hover:bg-secondary/30 transition-colors duration-500 flex items-end p-4 sm:p-6">
+                    <span className="font-body text-[10px] sm:text-xs tracking-[0.12em] sm:tracking-[0.2em] uppercase text-secondary-foreground opacity-100 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                       {img.category}
                     </span>
                   </div>
@@ -70,7 +72,7 @@ const Gallery = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-secondary/90 flex items-center justify-center p-8 cursor-pointer"
+            className="fixed inset-0 z-50 bg-secondary/90 flex items-center justify-center p-4 sm:p-8 cursor-pointer"
             onClick={() => setSelectedImage(null)}
           >
             <motion.img
@@ -79,11 +81,11 @@ const Gallery = () => {
               exit={{ scale: 0.9, opacity: 0 }}
               src={selectedImage}
               alt="Gallery preview"
-              className="max-w-full max-h-[85vh] object-contain"
+              className="max-w-full max-h-[78vh] sm:max-h-[85vh] object-contain"
             />
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-8 right-8 font-body text-xs tracking-[0.2em] uppercase text-secondary-foreground opacity-60 hover:opacity-100"
+              className="absolute top-4 right-4 sm:top-8 sm:right-8 font-body text-[10px] sm:text-xs tracking-[0.12em] sm:tracking-[0.2em] uppercase text-secondary-foreground opacity-60 hover:opacity-100"
             >
               Close
             </button>

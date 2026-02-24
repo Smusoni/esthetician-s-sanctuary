@@ -2,14 +2,16 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-beauty.jpg";
-import aboutImage from "@/assets/about-beauty.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
 
 import { fadeUp } from "@/lib/animations";
+import { mockImages } from "@/lib/mockImages";
+
+const heroImage = mockImages.heroBeauty;
+const aboutImage = mockImages.aboutBeauty;
+const gallery1 = mockImages.gallery1;
+const gallery2 = mockImages.gallery2;
+const gallery3 = mockImages.gallery3;
+const gallery4 = mockImages.gallery4;
 
 const Index = () => {
   return (
@@ -17,21 +19,21 @@ const Index = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen min-h-[560px] md:min-h-[600px] flex items-center justify-center overflow-hidden pt-16 md:pt-0">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Naji Beauty luxury esthetician services" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-secondary/40" />
         </div>
-        <div className="relative z-10 text-center px-8">
+        <div className="relative z-10 text-center px-4 sm:px-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <h1 className="font-display text-5xl md:text-7xl lg:text-9xl font-light text-secondary-foreground tracking-[0.2em] uppercase">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light text-secondary-foreground tracking-[0.08em] sm:tracking-[0.14em] md:tracking-[0.2em] uppercase">
               Naji Beauty
             </h1>
-            <p className="font-body text-xs md:text-sm tracking-[0.4em] uppercase text-secondary-foreground/70 mt-6">
+            <p className="font-body text-[10px] sm:text-xs md:text-sm tracking-[0.16em] sm:tracking-[0.28em] md:tracking-[0.4em] uppercase text-secondary-foreground/70 mt-4 sm:mt-6">
               Licensed Esthetician
             </p>
           </motion.div>
@@ -39,13 +41,13 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12"
+            className="mt-8 sm:mt-12"
           >
             <a
               href="https://app.acuityscheduling.com/schedule/5493fd4d"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block font-body text-xs tracking-[0.3em] uppercase border border-secondary-foreground/40 text-secondary-foreground px-10 py-4 hover:bg-secondary-foreground hover:text-secondary transition-all duration-500"
+              className="inline-block font-body text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.3em] uppercase border border-secondary-foreground/40 text-secondary-foreground px-6 sm:px-10 py-3 sm:py-4 hover:bg-secondary-foreground hover:text-secondary transition-all duration-500"
             >
               Book an Appointment
             </a>
@@ -54,8 +56,8 @@ const Index = () => {
       </section>
 
       {/* About Teaser */}
-      <section className="py-24 md:py-32 px-8 md:px-16">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-8 md:px-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -80,7 +82,7 @@ const Index = () => {
             <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground">
               About the Artist
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light leading-tight">
               Where skincare meets artistry
             </h2>
             <p className="font-body text-sm leading-relaxed text-muted-foreground">
@@ -100,7 +102,7 @@ const Index = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="bg-secondary text-secondary-foreground py-24 md:py-32 px-8 md:px-16">
+      <section className="bg-secondary text-secondary-foreground py-16 sm:py-20 md:py-32 px-4 sm:px-8 md:px-16">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial="hidden"
@@ -113,12 +115,12 @@ const Index = () => {
             <p className="font-body text-xs tracking-[0.3em] uppercase opacity-50 mb-4">
               Our Services
             </p>
-            <h2 className="font-display text-4xl md:text-6xl font-light tracking-[0.1em]">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl font-light tracking-[0.06em] md:tracking-[0.1em]">
               Treatments
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {[
               { title: "Facials", desc: "Express, Radiance, Gentleman's & more", price: "From $50" },
               { title: "Peels", desc: "Dermalogica custom peels & dermaplaning", price: "From $120" },
@@ -132,9 +134,9 @@ const Index = () => {
                 viewport={{ once: true }}
                 custom={i}
                 variants={fadeUp}
-                className="border border-secondary-foreground/10 p-8 text-center group hover:bg-secondary-foreground/5 transition-colors duration-500"
+                className="border border-secondary-foreground/10 p-5 sm:p-6 md:p-8 text-center group hover:bg-secondary-foreground/5 transition-colors duration-500"
               >
-                <h3 className="font-display text-2xl font-light tracking-[0.15em] mb-3">
+                <h3 className="font-display text-xl sm:text-2xl font-light tracking-[0.1em] sm:tracking-[0.15em] mb-3">
                   {service.title}
                 </h3>
                 <p className="font-body text-xs opacity-60 mb-4 leading-relaxed">
@@ -166,7 +168,7 @@ const Index = () => {
       </section>
 
       {/* Gallery Preview */}
-      <section className="py-24 md:py-32 px-8 md:px-16">
+      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-8 md:px-16">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial="hidden"
@@ -179,12 +181,12 @@ const Index = () => {
             <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
               Portfolio
             </p>
-            <h2 className="font-display text-4xl md:text-6xl font-light tracking-[0.1em]">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-6xl font-light tracking-[0.06em] md:tracking-[0.1em]">
               Our Work
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {[gallery1, gallery2, gallery3, gallery4].map((img, i) => (
               <motion.div
                 key={i}
@@ -223,7 +225,7 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-secondary text-secondary-foreground py-24 px-8 text-center">
+      <section className="bg-secondary text-secondary-foreground py-16 sm:py-20 md:py-24 px-4 sm:px-8 text-center">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -231,7 +233,7 @@ const Index = () => {
           custom={0}
           variants={fadeUp}
         >
-          <h2 className="font-display text-4xl md:text-6xl font-light tracking-[0.1em] mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-6xl font-light tracking-[0.06em] md:tracking-[0.1em] mb-6">
             Ready to Glow?
           </h2>
           <p className="font-body text-sm opacity-60 mb-10 max-w-md mx-auto">
@@ -241,7 +243,7 @@ const Index = () => {
             href="https://app.acuityscheduling.com/schedule/5493fd4d"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-body text-xs tracking-[0.3em] uppercase border border-secondary-foreground/40 text-secondary-foreground px-10 py-4 hover:bg-secondary-foreground hover:text-secondary transition-all duration-500"
+            className="inline-block font-body text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.3em] uppercase border border-secondary-foreground/40 text-secondary-foreground px-6 sm:px-10 py-3 sm:py-4 hover:bg-secondary-foreground hover:text-secondary transition-all duration-500"
           >
             Book Now
           </a>

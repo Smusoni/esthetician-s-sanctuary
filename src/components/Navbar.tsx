@@ -15,8 +15,11 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
-      <div className="flex items-center justify-between px-8 py-6 md:px-16">
-        <Link to="/" className="font-display text-2xl font-light tracking-[0.3em] text-primary-foreground uppercase">
+      <div className="flex items-center justify-between px-4 py-4 sm:px-6 md:px-16 md:py-6">
+        <Link
+          to="/"
+          className="font-display text-lg sm:text-xl md:text-2xl font-light tracking-[0.12em] sm:tracking-[0.2em] md:tracking-[0.3em] text-primary-foreground uppercase"
+        >
           Naji Beauty
         </Link>
 
@@ -46,7 +49,7 @@ const Navbar = () => {
         {/* Mobile hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden flex flex-col gap-1.5 z-50"
+          className="md:hidden flex flex-col gap-1.5 z-50 p-1"
           aria-label="Menu"
         >
           <span className={`block w-6 h-px bg-primary-foreground transition-transform duration-300 ${isOpen ? "rotate-45 translate-y-[3.5px]" : ""}`} />
@@ -62,9 +65,9 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-secondary flex items-center justify-center mix-blend-normal"
+            className="fixed inset-0 bg-secondary flex items-center justify-center mix-blend-normal px-6"
           >
-            <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-6 text-center">
               {navItems.map((item, i) => (
                 <motion.div
                   key={item.path}
@@ -75,7 +78,7 @@ const Navbar = () => {
                   <Link
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className="font-display text-3xl tracking-[0.2em] text-secondary-foreground uppercase"
+                    className="font-display text-2xl sm:text-3xl tracking-[0.12em] sm:tracking-[0.2em] text-secondary-foreground uppercase"
                   >
                     {item.label}
                   </Link>
@@ -91,7 +94,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
-                  className="font-display text-3xl tracking-[0.2em] text-secondary-foreground uppercase"
+                  className="font-display text-2xl sm:text-3xl tracking-[0.12em] sm:tracking-[0.2em] text-secondary-foreground uppercase"
                 >
                   Book Now
                 </a>

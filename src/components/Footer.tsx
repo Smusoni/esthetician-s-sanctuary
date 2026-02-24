@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-secondary-foreground py-16 px-8 md:px-16">
+    <footer className="bg-secondary text-secondary-foreground py-12 sm:py-16 px-4 sm:px-8 md:px-16">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 mb-10 sm:mb-12">
           <div>
-            <h3 className="font-display text-2xl font-light tracking-[0.2em] uppercase mb-6">
+            <h3 className="font-display text-xl sm:text-2xl font-light tracking-[0.12em] sm:tracking-[0.2em] uppercase mb-4 sm:mb-6">
               Naji Beauty
             </h3>
             <p className="font-body text-sm leading-relaxed opacity-70">
@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-body text-xs tracking-[0.25em] uppercase mb-6 opacity-50">
+            <h4 className="font-body text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-4 sm:mb-6 opacity-50">
               Quick Links
             </h4>
             <div className="flex flex-col gap-3">
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-body text-xs tracking-[0.25em] uppercase mb-6 opacity-50">
+            <h4 className="font-body text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase mb-4 sm:mb-6 opacity-50">
               Policies
             </h4>
             <div className="flex flex-col gap-3 font-body text-sm opacity-70">

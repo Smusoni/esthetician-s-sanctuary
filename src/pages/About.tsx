@@ -2,10 +2,12 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
-import aboutImage from "@/assets/about-beauty.jpg";
-import servicesHero from "@/assets/services-hero.jpg";
 
 import { fadeUp } from "@/lib/animations";
+import { mockImages } from "@/lib/mockImages";
+
+const aboutImage = mockImages.aboutBeauty;
+const servicesHero = mockImages.servicesHero;
 
 const About = () => {
   return (
@@ -14,8 +16,8 @@ const About = () => {
       <PageHero image={servicesHero} title="About" subtitle="The Artist Behind the Glow" />
 
       {/* Story */}
-      <section className="py-24 md:py-32 px-8 md:px-16">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-16 sm:py-20 md:py-32 px-4 sm:px-8 md:px-16">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp}
           >
@@ -26,7 +28,7 @@ const About = () => {
             className="space-y-6"
           >
             <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground">Our Story</p>
-            <h2 className="font-display text-4xl md:text-5xl font-light leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light leading-tight">
               Beauty is personal. So is every treatment.
             </h2>
             <p className="font-body text-sm leading-relaxed text-muted-foreground">
@@ -44,17 +46,17 @@ const About = () => {
       </section>
 
       {/* What to Expect */}
-      <section className="bg-secondary text-secondary-foreground py-24 px-8 md:px-16">
+      <section className="bg-secondary text-secondary-foreground py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-16">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp}
             className="text-center mb-16"
           >
             <p className="font-body text-xs tracking-[0.3em] uppercase opacity-50 mb-4">For New Clients</p>
-            <h2 className="font-display text-4xl md:text-5xl font-light tracking-[0.1em]">What to Expect</h2>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-light tracking-[0.06em] md:tracking-[0.1em]">What to Expect</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
             {[
               {
                 num: "01",
@@ -87,13 +89,13 @@ const About = () => {
       </section>
 
       {/* Policies */}
-      <section className="py-24 px-8 md:px-16">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-16">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp}
             className="text-center mb-12"
           >
-            <h2 className="font-display text-4xl font-light tracking-[0.1em]">Good to Know</h2>
+            <h2 className="font-display text-3xl sm:text-4xl font-light tracking-[0.06em] md:tracking-[0.1em]">Good to Know</h2>
           </motion.div>
 
           <motion.div
@@ -116,14 +118,14 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-secondary text-secondary-foreground py-20 px-8 text-center">
+      <section className="bg-secondary text-secondary-foreground py-16 sm:py-20 px-4 sm:px-8 text-center">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp}>
-          <h2 className="font-display text-4xl font-light tracking-[0.1em] mb-8">Let's Get Started</h2>
+          <h2 className="font-display text-3xl sm:text-4xl font-light tracking-[0.06em] md:tracking-[0.1em] mb-8">Let's Get Started</h2>
           <a
             href="https://app.acuityscheduling.com/schedule/5493fd4d"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-body text-xs tracking-[0.3em] uppercase border border-secondary-foreground/40 text-secondary-foreground px-10 py-4 hover:bg-secondary-foreground hover:text-secondary transition-all duration-500"
+            className="inline-block font-body text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.3em] uppercase border border-secondary-foreground/40 text-secondary-foreground px-6 sm:px-10 py-3 sm:py-4 hover:bg-secondary-foreground hover:text-secondary transition-all duration-500"
           >
             Book Your Appointment
           </a>

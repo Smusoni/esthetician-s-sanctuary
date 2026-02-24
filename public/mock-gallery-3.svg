@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <rect width="900" height="900" fill="#302126" />
+  <ellipse cx="450" cy="430" rx="205" ry="235" fill="#7b503d" />
+  <path d="M300 350 Q450 230 600 350" fill="none" stroke="#1d1316" stroke-width="64" stroke-linecap="round" />
+  <text x="450" y="820" text-anchor="middle" fill="#f3e6dc" font-family="Arial, sans-serif" font-size="34" letter-spacing="4">
+    GALLERY MOCKUP 3
+  </text>
+</svg>

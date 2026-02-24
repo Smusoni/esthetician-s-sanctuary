@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a1315" />
+      <stop offset="100%" stop-color="#4f3640" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)" />
+  <rect x="180" y="260" width="520" height="420" rx="28" fill="#f1e6dc" opacity="0.15" />
+  <rect x="900" y="260" width="520" height="420" rx="28" fill="#f1e6dc" opacity="0.15" />
+  <ellipse cx="500" cy="470" rx="120" ry="145" fill="#6a3f30" />
+  <ellipse cx="1100" cy="470" rx="120" ry="145" fill="#7a4c39" />
+  <path d="M390 390 Q500 270 610 390" fill="none" stroke="#1f1416" stroke-width="54" stroke-linecap="round" />
+  <path d="M990 390 Q1100 270 1210 390" fill="none" stroke="#1f1416" stroke-width="54" stroke-linecap="round" />
+  <text x="800" y="910" text-anchor="middle" fill="#f3e7df" font-family="Arial, sans-serif" font-size="40" letter-spacing="6">
+    TREATMENT ROOM MOCKUP
+  </text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f1517" />
+      <stop offset="100%" stop-color="#5f3a42" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)" />
+  <circle cx="800" cy="500" r="220" fill="#6b3f2f" />
+  <ellipse cx="800" cy="760" rx="330" ry="180" fill="#2a1b1e" />
+  <ellipse cx="720" cy="470" rx="22" ry="16" fill="#2b1a18" />
+  <ellipse cx="880" cy="470" rx="22" ry="16" fill="#2b1a18" />
+  <path d="M730 575 Q800 625 870 575" fill="none" stroke="#2b1a18" stroke-width="16" stroke-linecap="round" />
+  <path d="M600 340 Q800 140 1000 340" fill="none" stroke="#1a1113" stroke-width="80" stroke-linecap="round" />
+  <text x="800" y="930" text-anchor="middle" fill="#f3e7df" font-family="Arial, sans-serif" font-size="44" letter-spacing="6">
+    BLACK WOMAN SPA MOCKUP
+  </text>
+</svg>

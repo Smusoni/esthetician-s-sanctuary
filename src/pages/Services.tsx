@@ -2,9 +2,11 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
-import servicesHero from "@/assets/services-hero.jpg";
 
 import { fadeUp } from "@/lib/animations";
+import { mockImages } from "@/lib/mockImages";
+
+const servicesHero = mockImages.servicesHero;
 
 interface ServiceItem {
   name: string;
@@ -79,7 +81,7 @@ const Services = () => {
       <Navbar />
       <PageHero image={servicesHero} title="Services" subtitle="Luxury Treatments Tailored to You" />
 
-      <section className="py-24 px-8 md:px-16">
+      <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-16">
         <div className="max-w-4xl mx-auto">
           {serviceCategories.map((category, ci) => (
             <motion.div
@@ -89,9 +91,9 @@ const Services = () => {
               viewport={{ once: true, margin: "-50px" }}
               custom={0}
               variants={fadeUp}
-              className="mb-20"
+              className="mb-14 sm:mb-16 md:mb-20"
             >
-              <h2 className="font-display text-3xl md:text-4xl font-light tracking-[0.15em] mb-10 text-center">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-light tracking-[0.08em] md:tracking-[0.15em] mb-8 sm:mb-10 text-center">
                 {category.title}
               </h2>
               <div className="space-y-0">
@@ -105,9 +107,9 @@ const Services = () => {
                     variants={fadeUp}
                     className="border-b border-border py-6 group"
                   >
-                    <div className="flex items-baseline justify-between gap-4">
+                    <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-4">
                       <div className="flex-1">
-                        <h3 className="font-display text-lg md:text-xl tracking-[0.05em]">
+                        <h3 className="font-display text-lg md:text-xl tracking-[0.04em] md:tracking-[0.05em]">
                           {service.name}
                         </h3>
                         {service.description && (
@@ -116,7 +118,7 @@ const Services = () => {
                           </p>
                         )}
                       </div>
-                      <div className="text-right shrink-0">
+                      <div className="text-left sm:text-right shrink-0">
                         <span className="font-display text-lg text-gold">{service.price}</span>
                         <p className="font-body text-xs text-muted-foreground mt-1">{service.duration}</p>
                       </div>
@@ -135,7 +137,7 @@ const Services = () => {
               href="https://app.acuityscheduling.com/schedule/5493fd4d"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block font-body text-xs tracking-[0.3em] uppercase bg-secondary text-secondary-foreground px-12 py-4 hover:bg-foreground hover:text-background transition-all duration-500"
+              className="inline-block font-body text-[10px] sm:text-xs tracking-[0.16em] sm:tracking-[0.3em] uppercase bg-secondary text-secondary-foreground px-7 sm:px-12 py-3 sm:py-4 hover:bg-foreground hover:text-background transition-all duration-500"
             >
               Book Your Treatment
             </a>
